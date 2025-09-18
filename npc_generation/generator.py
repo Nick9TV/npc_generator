@@ -88,3 +88,5 @@ def generate_charactre(index: StoryIndex, request: str, ensure_unique: bool=True
     
     return data
 
+def list_roaster() -> List[Dict[str, Any]]:
+    return _load_roster()
