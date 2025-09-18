@@ -12,3 +12,11 @@ class settings:
     CHUNK_OVERLAP = os.getenv("CHUNK_OVERLAP")
     
     INDEX_PATH = os.getenv("INDEX_PATH")
+    
+    OPEN_API_KEY = os.getenv("OPEN_API_KEY")
+    
+    CHAT_MODEL = os.getenv("CHAT_MODEL")
+    
+    TEMPERATURE = os.getenv("TEMPERATURE")
+
+    MAX_TOKENS = os.getenv("MAX_TOKENS")
