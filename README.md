@@ -7,7 +7,7 @@ This is a **Python** implementation of an interactive NPC generator that:
 
 ## Features
 - Simple story ingestion and chunking
-- Q&A grounded in your story (with safe "Unknown..." fallback)
+- Q&A grounded in your story
 - Character generator with **name uniqueness** check and JSON output
 - Persistent **roster** saved to `data/roster.jsonl`
 - Works with any story file you provide (swap in a new `fantasy.md`)
