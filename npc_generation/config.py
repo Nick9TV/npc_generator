@@ -17,6 +17,7 @@ class settings:
     
     # Storage
     INDEX_PATH = os.getenv("INDEX_PATH") # data/index.json
+    SAVE_PATH = os.getenv("SAVE_PATH") # data/roster.jsonl
     
     # Model choices
     CHAT_MODEL = os.getenv("CHAT_MODEL")  # gpt-4o-mini
