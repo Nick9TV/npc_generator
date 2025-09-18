@@ -89,12 +89,3 @@ npc_generator/
   README.md
   requirements.txt
 ```
-
-## Extending
-- Swap providers: set `LLM_PROVIDER` and implement other providers in `llm.py`.
-- Add web UI (FastAPI + simple chat page).
-- Add embeddings for retrieval; cache chunk vectors to `data/`.
-
-## Testing
-- Add unit tests under `tests/`.
-- Mock LLM responses for offline tests.
