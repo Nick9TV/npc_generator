@@ -1,7 +1,7 @@
 import argparse, json
 from npc_generation.story import StoryIndex
 from npc_generation.qa import answer_question
-from npc_generation.generator import generate_charactre, list_roster
+from npc_generation.generator import generate_character, list_roster
 
 BANNER = "AI NPC Generation System (Python) ver. 1.0 - Type 'help' for commands."
 
@@ -33,7 +33,7 @@ def repl(index: StoryIndex):
             continue
         if line.startswith("gen "):
             r = line[4:].strip()
-            data = generate_charactre(index, r)
+            data = generate_character(index, r)
             print(json.dumps(data, ensure_ascii=False, indent=2))
             continue
         if line == "roaster":

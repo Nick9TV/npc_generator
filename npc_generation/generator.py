@@ -22,7 +22,7 @@ def _load_roster() -> List[Dict[str, Any]]:
                 if not line:
                     continue
                 try:
-                    roster.append(json.load(line))
+                    roster.append(json.loads(line))
                 except json.JSONDecodeError:
                     continue
     except OSError:
@@ -40,8 +40,8 @@ def _save_to_roster(entry: Dict[str, Any]):
 def _exisitng_names_lower() -> set:
     return {e.get("name","").lower() for e in _load_roster()}
 
-def generate_charactre(index: StoryIndex, request: str, ensure_unique: bool=True, save: bool=True) -> Dict[str, Any]:
-    llm = LLM
+def generate_character(index: StoryIndex, request: str, ensure_unique: bool=True, save: bool=True) -> Dict[str, Any]:
+    llm = LLM()
     story = index.contex()
     
     # uniqueness promt hint
