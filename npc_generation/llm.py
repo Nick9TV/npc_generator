@@ -10,7 +10,7 @@ class LLM:
         try:
             from openai import OpenAI
         except Exception as e:
-            raise RuntimeError("Please install openai>=1.3.0 to use this project") from e
+            raise RuntimeError("Please install openai to use this project") from e
         
         if not settings.OPEN_API_KEY:
             raise RuntimeError("OPENAI_API_KEY is not set. Export it before running")
