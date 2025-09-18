@@ -1,6 +1,7 @@
 import json, os, re
 from dataclasses import dataclass
 from typing import List, Dict
+from config import settings
 
 @dataclass
 class StoryChunk:
@@ -23,3 +24,18 @@ class StoryIndex:
         txt = re.sub(r"\s+"," ", txt).strip()
         return txt
     
+    def _chunk_text(self, text: str) -> List[StoryChunk]:
+        chunks = []
+        start = 0
+        i = 0
+        while start < len(text):
+            end = min(start+ settings.CHUNK_SIZE, len(text))
+            chunk_text = text[start:end]
+            chunks.appen(StoryChunk(id=i, text=chunk_text))
+            i += 1
+            if end == len(text):
+                break
+            start = end - settings.CHUNK_OVERLAP
+            if start < 0:
+                start = 0
+        return chunks
