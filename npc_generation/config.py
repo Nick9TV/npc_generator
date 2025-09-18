@@ -1,22 +1,26 @@
 import os
 from dotenv import load_dotenv
 
-
+# importing data from .env file
 load_dotenv()
 
 class settings:
-    OPEN_API_KEY = os.getenv("OPEN_API_KEY")
+    # OpenAI config
+    OPEN_API_KEY = os.getenv("OPEN_API_KEY") # paste your Api key
     
-    CHUNK_SIZE = os.getenv("CHUNK_SIZE")
+    # Provider selection
+    PROVIDER = os.getenv("PROVIDER").lower() # openai
     
-    CHUNK_OVERLAP = os.getenv("CHUNK_OVERLAP")
+    # Chunking
+    CHUNK_SIZE = int(os.getenv("CHUNK_SIZE")) # 1200
+    CHUNK_OVERLAP = int(os.getenv("CHUNK_OVERLAP")) # 200
     
-    INDEX_PATH = os.getenv("INDEX_PATH")
+    # Storage
+    INDEX_PATH = os.getenv("INDEX_PATH") # data/index.json
     
-    OPEN_API_KEY = os.getenv("OPEN_API_KEY")
+    # Model choices
+    CHAT_MODEL = os.getenv("CHAT_MODEL")  # gpt-4o-mini
     
-    CHAT_MODEL = os.getenv("CHAT_MODEL")
-    
-    TEMPERATURE = os.getenv("TEMPERATURE")
-
-    MAX_TOKENS = os.getenv("MAX_TOKENS")
+    # Generation defaults
+    TEMPERATURE = float(os.getenv("TEMPERATURE")) # 0.7
+    MAX_TOKENS = int(os.getenv("MAX_TOKENS")) # 600
