@@ -1,6 +1,6 @@
 import json, os, re, uuid
 from typing import Dict, List, Any
-from config import settings
+from .config import settings
 from .story import StoryIndex
 from .llm import LLM
 

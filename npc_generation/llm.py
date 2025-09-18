@@ -1,5 +1,5 @@
 from typing import List, Dict, Any
-from config import settings
+from .config import settings
 import os
 
 class LLM:

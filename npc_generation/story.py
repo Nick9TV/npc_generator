@@ -1,7 +1,7 @@
 import json, os, re
 from dataclasses import dataclass
 from typing import List, Dict
-from config import settings
+from .config import settings
 
 @dataclass
 class StoryChunk:
