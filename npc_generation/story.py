@@ -31,7 +31,7 @@ class StoryIndex:
         while start < len(text):
             end = min(start+ settings.CHUNK_SIZE, len(text))
             chunk_text = text[start:end]
-            chunks.appen(StoryChunk(id=i, text=chunk_text))
+            chunks.append(StoryChunk(id=i, text=chunk_text))
             i += 1
             if end == len(text):
                 break
