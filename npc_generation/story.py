@@ -39,3 +39,18 @@ class StoryIndex:
             if start < 0:
                 start = 0
         return chunks
+    
+    def _save_index(self):
+        os.makedirs(os.path.dirname(settings.INDEX_PATH), exist_ok=True)
+        data = {"story_path": self.story_path, "num_chunks": len(self.chunks)}
+        with open(settings.INDEX_PATH, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+            
+    def contex(self) -> str:
+        # for simplicity import full story because its short
+        return self.text
+        
+    def short_context(self) -> str:
+        # use frist fiew chunks to keep prompt smaller
+        first_chunks = " ".join(c.text for c in self.chunks[:3])
+        return first_chunks
