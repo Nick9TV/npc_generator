@@ -56,11 +56,6 @@ python app.py --story data/fantasy.md
 - `quit` / `exit`  
   Leave the interactive session.
   
-Inside the REPL:
-
-- `ask What are the main factions?`
-- `gen Make me a rogue from the desert traders, good with daggers.`
-- `roster` to list all previously generated NPCs
 
 Example generator output:
 ```json
