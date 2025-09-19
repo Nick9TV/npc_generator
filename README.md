@@ -26,7 +26,7 @@ This is a **Python** implementation of an interactive NPC generator that:
    ```
 3. Set your API key in .env file:
    ```bash
-   export OPENAI_API_KEY=sk-...   # Windows PowerShell: setx OPENAI_API_KEY "sk-..."
+   OPENAI_API_KEY=sk-...
    ```
 
 ## Usage
